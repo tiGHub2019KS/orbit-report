@@ -1,3 +1,5 @@
+
+
 export class Satellite {
     name: string;
     orbitType: string;
@@ -11,5 +13,14 @@ export class Satellite {
         this. launchDate = launchDate;
         this.orbitType = orbitType;
         this.operational = operational;
+    }
+
+    shouleShowWarning() {
+        if(this.type === 'Space Debris') {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

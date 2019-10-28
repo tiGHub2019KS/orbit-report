@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {OrbitListComponent} from './orbit-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
