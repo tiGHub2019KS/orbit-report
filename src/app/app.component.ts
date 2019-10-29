@@ -4,6 +4,7 @@ import { SelectorMatcher } from '@angular/compiler';
 
 let sourceList: Satellite[];
 let displayList: Satellite[];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,8 +28,9 @@ export class AppComponent {
           for(let i=0; i < fetchedSatellites.length; i++) {
              let sat = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
              this.sourceList.push(sat);
-             this.displayList = this.sourceList.slice(0);
+            //  this.displayList = this.sourceList.slice(0);
           }
+          this.displayList = this.sourceList.slice(0);
       }.bind(this));
     }.bind(this));
       
